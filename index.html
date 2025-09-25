@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GetmeVerify - Background Verification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary-light': '#ffffff',
+              'brand-secondary-light': '#f8fafc',
+              'brand-primary-dark': '#1e293b',
+              'brand-secondary-dark': '#0f172a',
+
+              'brand-accent': '#22c55e',
+              'brand-accent-hover': '#16a34a',
+              'status-pending': '#f59e0b',
+              'status-progress': '#3b82f6',
+              'status-completed': '#22c55e',
+              'status-failed': '#ef4444',
+            },
+          },
+        },
+      }
+    </script>
+  <style>
+      @media print {
+        /* Reset background and text colors for printing to ensure readability */
+        body {
+          background-color: #fff !important;
+          color: #000 !important;
+        }
+        .dark body {
+            background-color: #fff !important;
+            color: #000 !important;
+        }
+        /* Ensure dark mode text is readable when printed from dark mode */
+        .dark .dark\:text-slate-100, .dark .dark\:text-slate-200, .dark .dark\:text-slate-300, .dark .dark\:text-slate-400, .dark .dark\:text-white {
+            color: #000 !important;
+        }
+        /* Reset dark mode backgrounds and borders for print */
+        .dark .dark\:bg-brand-primary-dark, .dark .dark\:bg-brand-secondary-dark, .dark .dark\:bg-brand-primary-light {
+            background-color: #fff !important;
+            border-color: #e2e8f0 !important; /* slate-200 */
+        }
+        .dark .dark\:border-slate-700 {
+            border-color: #e2e8f0 !important; /* slate-200 */
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.1",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^0.15.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-green-50 text-slate-700 dark:bg-brand-secondary-dark dark:text-slate-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

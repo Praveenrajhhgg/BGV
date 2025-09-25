@@ -1,0 +1,5 @@
+{
+  "name": "BGV Shield - Background Verification Platform",
+  "description": "A comprehensive SaaS platform for companies to manage background verification for candidates. This application provides portals for clients (HR), candidates, and administrators to streamline the verification process.",
+  "requestFramePermissions": []
+}
